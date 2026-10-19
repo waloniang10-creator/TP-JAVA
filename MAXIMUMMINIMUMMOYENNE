@@ -1,0 +1,13 @@
+public class MinimumMaximumMoyenne {
+    public static void main(String[] args) {
+        int[] tab = {10, 20, 30, 40, 50};
+        int min = tab[0], max = tab[0], somme = 0;
+        for (int i = 0; i < tab.length; i++) {
+            if (tab[i] < min) min = tab[i];
+            if (tab[i] > max) max = tab[i];
+            somme += tab[i];
+        }
+        double moyenne = (double) somme / tab.length;
+        System.out.printf("min=%d, max=%d, moyenne=%.2f%n", min, max, moyenne);
+    }
+}
